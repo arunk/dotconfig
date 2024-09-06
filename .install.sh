@@ -30,5 +30,9 @@ if [[ ! -d ~/.vim/pack/minpac/opt/minpac ]]; then
     git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 fi
 
+if [[ ! -d ~/.fzf ]]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+fi
 /usr/bin/env fish ~/.config/fish/install.fish
 
