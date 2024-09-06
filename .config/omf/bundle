@@ -1,6 +1,8 @@
 package foreign-env
 package https://github.com/acomagu/fish-async-prompt
+package https://github.com/jorgebucaran/fish-nvm
 package https://github.com/oh-my-fish/plugin-extract
 package nvm
 package zoxide
+theme bobthefish
 theme default

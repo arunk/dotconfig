@@ -1,8 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    set -gx LIBGL_ALWAYS_INDIRECT 1
-    set -gx DISPLAY (ipconfig.exe | grep 'vEthernet (WSL' -A4 | cut -d":" -f 2 | tail -n1 | sed -e 's/\s*//g'):0
-    set -gx WINH /mnt/c/Users/arunk
+    if test (grep microsoft /proc/version)
+        set -gx WINH /mnt/c/Users/arunk
+        set -gx DISPLAY (ipconfig.exe | grep 'vEthernet (WSL' -A4 | cut -d":" -f 2 | tail -n1 | sed -e 's/\s*//g'):0
+        set -gx LIBGL_ALWAYS_INDIRECT 1
+    end
     rvm default
     abbr --add dotdot --regex '^\.\.+$' --function multicd
 
